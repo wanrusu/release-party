@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>⚡️ 政策組 v2026 RELEASE ⚡️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+        
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            overflow: hidden; background: #FFFB00; 
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #canvas-container {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 5; cursor: grab;
+        }
+
+        .ui-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 10;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            padding: 20px; box-sizing: border-box;
+        }
+
+        .main-card {
+            background: rgba(255, 255, 255, 0.98);
+            border: 6px solid #000;
+            padding: 40px;
+            max-width: 580px;
+            text-align: center;
+            pointer-events: auto;
+            box-shadow: 20px 20px 0 rgba(0,0,0,1);
+            position: relative;
+        }
+
+        h1 {
+            background: #000; color: #00E5FF; display: inline-block;
+            padding: 5px 20px; margin: 0 0 20px 0; font-size: 1.6rem; font-weight: 900;
+        }
+
+        .content {
+            line-height: 1.9; font-size: 1.05rem; color: #000; margin: 0;
+            text-align: justify; font-weight: 500;
+        }
+
+        .highlight { color: #FF5A5F; font-weight: 900; border-bottom: 3px solid #FF5A5F; }
+
+        .signature { text-align: right; margin-top: 25px; font-weight: 900; font-size: 1.1rem; }
+
+        .info-panel {
+            margin-top: 30px; padding: 15px;
+            background: #F0F0F0; border: 3px dashed #000;
+            text-align: left; font-weight: 700; font-size: 0.95rem;
+        }
+
+        .btn-group {
+            margin-top: 30px; display: flex; gap: 12px; justify-content: center; 
+            pointer-events: auto; position: relative; z-index: 100;
+        }
+
+        .cta-btn {
+            background: #000; color: #fff; text-decoration: none;
+            padding: 15px 30px; font-size: 1.1rem; font-weight: 900;
+            border: none; border-radius: 50px; cursor: pointer;
+            box-shadow: 0 6px 0 #333; transition: 0.1s;
+        }
+
+        .cta-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #333; }
+        .calendar-btn { background: #FF5A5F; box-shadow: 0 6px 0 #CF4A4E; }
+
+        /* 升級版彩蛋：霓虹跳動標籤 */
+        .neon-egg {
+            position: fixed; bottom: 20px; right: 20px;
+            background: #000; color: #0FF; padding: 8px 15px;
+            font-size: 0.8rem; font-weight: 900; border-radius: 5px;
+            border: 2px solid #0FF;
+            box-shadow: 0 0 10px #0FF;
+            animation: blink 1.5s infinite ease-in-out, bounce 2s infinite ease-in-out;
+            pointer-events: auto; z-index: 1000;
+        }
+
+        @keyframes blink { 
+            0%, 100% { opacity: 1; box-shadow: 0 0 15px #0FF; }
+            50% { opacity: 0.7; box-shadow: 0 0 5px #0FF; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div id="canvas-container"></div>
+
+<div class="ui-layer">
+    <div class="main-card">
+        <h1>親愛的署長：</h1>
+        <div class="content">
+            今年是充滿挑戰與機遇的一年，署長和我們一起站在政策規劃的第一線，進行高密度的決策、協調與推動。許多關鍵選擇、在鎂光燈後的反覆推演，都因署長的<span class="highlight">信任與定錨</span>，讓大家得以穩定前行、順利落地。<br><br>
+            因此，我們期待用一場聚餐，讓大家進行一次低干擾、無風險、但高度必要的<span class="highlight">組織情緒校準</span>，讓我們在新一年<span class="highlight">迎難而上</span>。<br><br>
+            誠摯邀請署長蒞臨，在沒有簡報、不需要裁示、也暫時不啟動任何工作群組的狀態下，與我們一起完成本年度最後一項、也是最愉快的收官流程。
+        </div>
+        <div class="signature">政策規劃組 明徽　敬邀</div>
+
+        <div class="info-panel">
+            📅 時間：2026年1月14日(三) 18:30 <br>
+            📍 地點：新韓館 (臺北市中山區復興北路344號)
+        </div>
+
+        <div class="btn-group">
+            <button id="explode-btn" class="cta-btn">⚡️ 一鍵解壓</button>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%E6%94%BF%E7%AD%96%E7%B5%84%E8%BF%AD%E4%BB%A3%20v2026.01%20Release%20Party&dates=20260114T103000Z/20260114T123000Z" class="cta-btn calendar-btn" target="_blank">同步行事曆 ➜</a>
+        </div>
+    </div>
+    
+    <div class="neon-egg" onclick="alert('🔧 核心情緒模組載入中... 效能 100%')">
+        SYSTEM: 內部測試通過 (副作用極低)
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+<script>
+    const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint, Body, Events } = Matter;
+
+    const engine = Engine.create();
+    const render = Render.create({
+        element: document.getElementById('canvas-container'),
+        engine: engine,
+        options: {
+            width: window.innerWidth, height: window.innerHeight,
+            background: 'transparent', wireframes: false
+        }
+    });
+
+    const walls = [
+        Bodies.rectangle(window.innerWidth/2, window.innerHeight+50, window.innerWidth, 100, { isStatic: true }),
+        Bodies.rectangle(-50, window.innerHeight/2, 100, window.innerHeight, { isStatic: true }),
+        Bodies.rectangle(window.innerWidth+50, window.innerHeight/2, 100, window.innerHeight, { isStatic: true })
+    ];
+    Composite.add(engine.world, walls);
+
+    const words = ["挑戰", "機遇", "第一線", "高密度", "鎂光燈後", "信任", "定錨", "穩定前行", "落地", "低干擾", "無風險", "情緒校準", "迎難而上", "NO簡報", "NO裁示", "收官", "愉快", "v2026", "ADI", "政策組"];
+    // 糖果色彩池
+    const colors = ["#00E5FF", "#FF5A5F", "#B693FE", "#26FFBF", "#FFA057", "#FFFFFF", "#000000"];
+    const blocks = [];
+
+    function getSpawnX() {
+        const sideWidth = window.innerWidth * 0.25;
+        return Math.random() < 0.5 ? Math.random() * sideWidth : window.innerWidth - (Math.random() * sideWidth);
+    }
+
+    for (let i = 0; i < 85; i++) { // 數量加多
+        const text = words[i % words.length];
+        const color = colors[i % colors.length];
+        const block = Bodies.rectangle(getSpawnX(), Math.random() * -2500, text.length * 28 + 30, 50, {
+            restitution: 0.7, friction: 0.1,
+            render: {
+                fillStyle: color,
+                strokeStyle: '#000', lineWidth: 3,
+                text: { content: text, color: (color === '#000000' || color === '#FF5A5F') ? '#fff' : '#000' }
+            }
+        });
+        blocks.push(block);
+    }
+    Composite.add(engine.world, blocks);
+
+    Events.on(render, 'afterRender', () => {
+        const ctx = render.context;
+        Composite.allBodies(engine.world).forEach(body => {
+            if (body.render.text) {
+                const { x, y } = body.position;
+                ctx.save();
+                ctx.translate(x, y); ctx.rotate(body.angle);
+                ctx.fillStyle = body.render.text.color;
+                ctx.font = "900 20px 'Noto Sans TC'";
+                ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+                ctx.fillText(body.render.text.content, 0, 0);
+                ctx.restore();
+            }
+        });
+    });
+
+    document.getElementById('explode-btn').addEventListener('click', () => {
+        blocks.forEach(block => {
+            const forceX = block.position.x < window.innerWidth / 2 ? -0.25 : 0.25;
+            Body.applyForce(block, block.position, { x: forceX * block.mass, y: -0.15 * block.mass });
+        });
+    });
+
+    const mouseConstraint = MouseConstraint.create(engine, {
+        mouse: Mouse.create(render.canvas),
+        constraint: { stiffness: 0.2, render: { visible: false } }
+    });
+    Composite.add(engine.world, mouseConstraint);
+
+    Runner.run(engine);
+    Render.run(render);
+
+    window.addEventListener('resize', () => {
+        render.canvas.width = window.innerWidth;
+        render.canvas.height = window.innerHeight;
+    });
+</script>
+
+</body>
+</html>
