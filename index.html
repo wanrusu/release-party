@@ -99,7 +99,7 @@
     <div class="main-card">
         <h1 id="boss-title">長官親啟：</h1>
         <div id="boss-content" class="content"></div>
-        <div id="boss-signature" class="signature">政策規劃組 敬邀</div>
+        <div id="boss-signature" class="signature"></div>
 
         <div class="info-panel">
             📅 2026.01.14 (三) 18:30 <br>
@@ -118,30 +118,15 @@
     const configs = {
         'boss': {
             title: '親愛的署長：',
-            content: '今年是充滿挑戰與機遇的一年，感謝署長與我們一同站在<span class="highlight">數位政策的第一線</span>，激勵我們走出舒適圈，看見政策規劃的各種可能。<br><br>許多不在鎂光燈下的反覆推演，都因署長的信任與定錨，讓大家得以穩定前行。因此，我們選擇用一場聚餐，慶祝這一年的成長與突破，讓我們在新的一年持續大步向前。<br><br>誠摯邀請署長蒞臨，在沒有簡報、不需裁示、也暫時不新啟任何工作群組的狀態下，與我們一起完成本年度最後、也最輕盈的時刻。',
+            content: '今年是充滿挑戰與機遇的一年，感謝署長與我們一同站在<span class="highlight">數位政策的第一線</span>，激勵我們<span class="highlight">走出舒適圈</span>，看見政策規劃的各種可能。<br><br>許多不在鎂光燈下的反覆推演，都因署長的<span class="highlight">信任與定錨</span>，讓大家得以<span class="highlight">穩定前行</span>。因此，我們選擇用一場聚餐，一起慶祝這一年的<span class="highlight">成長與突破</span>，讓我們在新的一年持續大步向前。<br><br>誠摯邀請署長蒞臨，在沒有簡報、不需裁示、也暫時不新啟任何工作群組的狀態下，與我們一起完成本年度最後、也最<span class="highlight">輕盈的時刻</span>。',
             sig: '政策規劃組 明徽、彥廷及全體同仁 敬邀'
         },
         'huang': {
             title: '親愛的黃副署長：',
-            content: '今年是充滿挑戰與機遇的一年，感謝黃副始終與我們站在一起，做我們最強力的後盾。因為有黃副的高度信任與支持，讓我們在面對各項挑戰時，能不畏困難，齊心協力完成任務。<br><br>今年政策組的成果，都包含著黃副給予的指導與關懷。這場聚餐，不僅是年度尾聲的相聚，更是一場<span class="highlight">戰友的聚會</span>。<br><br>誠摯邀請黃副蒞臨，在輕鬆的氛圍中，與我們一同慶賀 2025 年的豐收，並迎向 2026 年的嶄新旅程。',
+            content: '今年是充滿挑戰與機遇的一年，感謝黃副始終與我們站在一起，做我們<span class="highlight">最強力的後盾</span>。因為有黃副的高度<span class="highlight">信任與支持</span>，讓我們在面對各項挑戰時，能不畏困難，<span class="highlight">齊心協力</span>完成任務。<br><br>今年政策組的成果，都包含著黃副給予的<span class="highlight">指導與關懷</span>。這場聚餐，不僅是年度尾聲的相聚，更是一場<span class="highlight">戰友的聚會</span>。<br><br>誠摯邀請黃副蒞臨，在輕鬆的氛圍中，與我們一同慶賀 2025 年的<span class="highlight">豐收</span>，並迎向 2026 年的<span class="highlight">嶄新旅程</span>。',
             sig: '政策規劃組 明徽、彥廷及全體同仁 敬邀'
-        },
-        'chen': {
-            title: '親愛的陳副署長：',
-            content: '在多項跨領域政策協作中，陳副對整體局勢的洞察與專業判斷，始終是政策組在規劃與推演過程中的重要參考基準。<br><br>這一年來，我們在各項任務中也深受陳副嚴謹思維的指導。歲末之際，我們誠摯邀請陳副參與這場<span class="highlight">組織情緒校準</span>。<br><br>在繁忙公務之外，讓政策組有機會表達對您的敬意，並在一場輕鬆的聚餐中，共同分享今年度的點滴，一起迎向新的一年。',
-            sig: '政策規劃組 明徽、彥廷及全體同仁 敬邀'
-        },
-        'tong': {
-            title: '親愛的童主秘：',
-            content: '這一年下來，政策組在不少關鍵時刻，仍然沿用著<span class="highlight">熟悉、好用的節奏</span>，讓許多工作能夠穩定推進。<br><br>年度將近尾聲，我們規劃了一場輕鬆的聚餐，想暫時把公文放一旁，單純坐下來吃頓飯、聊聊天。<br><br>誠摯邀請主秘撥冗蒞臨，與我們一起完成這一年最後、也最輕盈的一段時光。',
-            sig: '政策規劃組 明徽、彥廷及全體同仁 敬邀'
-        },
-        'team': {
-            title: '給政策規劃組的各位戰友：',
-            content: '今年我們一起跑過無數場高強度的壓力測試。大家在各種變數中反覆推演、在壓力下依然優雅落地，這一年，內心除了自豪，更多的是感謝。<br><br>這是一場專屬於我們的 <span class="highlight">情緒除錯 (Debug) 聚會</span>。請大家暫時登出公務帳號，卸下那些看了就心亂的簡報與待辦清單。我們不搞情緒性發言，我們只搞「一鍵解壓」。<br><br>誠摯邀請大家蒞臨，讓我們用一頓飯的時間，單純地聚在一起，為這一年熱烈收官。',
-            sig: '明徽、彥廷 敬邀'
         }
-    };//
+    };
 
     const urlParams = new URLSearchParams(window.location.search);
     const target = urlParams.get('to') || 'boss';
@@ -151,9 +136,14 @@
         document.getElementById('boss-content').innerHTML = configs[target].content;
         document.getElementById('boss-signature').innerText = configs[target].sig;
         document.title = configs[target].title + " 2025 收官邀請函";
+    } else {
+        // 防止沒參數時內容消失，預設顯示署長版
+        document.getElementById('boss-title').innerText = configs['boss'].title;
+        document.getElementById('boss-content').innerHTML = configs['boss'].content;
+        document.getElementById('boss-signature').innerText = configs['boss'].sig;
     }
 
-    // 物理引擎邏輯
+    // 物理效果代碼
     const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint, Body, Events } = Matter;
     const engine = Engine.create();
     const isMobile = window.innerWidth < 480;
@@ -222,4 +212,3 @@
 </script>
 </body>
 </html>
-
