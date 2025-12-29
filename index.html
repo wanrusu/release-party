@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>⚡️ 政策組 v2026 RELEASE ⚡️</title>
 
     <meta property="og:title" content="署長親啟：2025 政策規劃組收官邀請函">
-    <meta property="og:description" content="本年度最後一項流程：組織情緒校準。請點擊進入互動邀請函。">
+    <meta property="og:description" content="ADI Year-End Party：本計畫已通過壓力測試，誠邀署長蒞臨。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wanrusu.github.io/release-party/">
-    
     <meta property="og:image" content="https://wanrusu.github.io/release-party/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
         
@@ -39,12 +39,12 @@
             border: 4px solid #000;
             padding: 25px 20px;
             max-width: 550px;
-            width: 90%; /* 手機自動滿版 */
+            width: 90%;
             text-align: center;
             pointer-events: auto;
             box-shadow: 12px 12px 0 rgba(0,0,0,1);
             position: relative;
-            max-height: 85vh; /* 確保不超過螢幕 */
+            max-height: 85vh;
             overflow-y: auto;
         }
 
@@ -96,12 +96,11 @@
 
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
-        /* 手機字體微調 */
         @media (max-width: 480px) {
             h1 { font-size: 1.1rem; }
             .content { font-size: 0.88rem; line-height: 1.6; }
             .main-card { padding: 20px 15px; }
-            .btn-group { flex-direction: column; } /* 按鈕在手機改為垂直排列 */
+            .btn-group { flex-direction: column; }
             .cta-btn { width: 100%; box-sizing: border-box; }
         }
     </style>
@@ -126,7 +125,7 @@
         </div>
 
         <div class="btn-group">
-            <button id="explode-btn" class="cta-btn">⚡️一鍵解壓 </button>
+            <button id="explode-btn" class="cta-btn">⚡️ 一鍵解壓</button>
             <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=ADI+Release+Party" class="cta-btn calendar-btn" target="_blank">同步行事曆 ➜</a>
         </div>
     </div>
@@ -148,6 +147,7 @@
         options: { width: window.innerWidth, height: window.innerHeight, background: 'transparent', wireframes: false }
     });
 
+    // 邊界設定
     Composite.add(engine.world, [
         Bodies.rectangle(window.innerWidth/2, window.innerHeight+50, window.innerWidth, 100, { isStatic: true }),
         Bodies.rectangle(-50, window.innerHeight/2, 100, window.innerHeight, { isStatic: true }),
@@ -158,14 +158,13 @@
     const colors = ["#00E5FF", "#FF5A5F", "#B693FE", "#26FFBF", "#FFA057", "#000"];
     const blocks = [];
 
-    // 手機版積木數量減半，大小縮小
     const count = isMobile ? 40 : 80;
     const blockSize = isMobile ? 0.7 : 1;
 
     for (let i = 0; i < count; i++) {
         const text = words[i % words.length];
         const color = colors[i % colors.length];
-        // 確保積木落在兩側
+        // 積木主要落在兩側，避免遮擋中央文字卡片
         const sideWidth = window.innerWidth * 0.2;
         const x = Math.random() < 0.5 ? Math.random() * sideWidth : window.innerWidth - (Math.random() * sideWidth);
         
@@ -177,6 +176,7 @@
     }
     Composite.add(engine.world, blocks);
 
+    // 文字渲染邏輯
     Events.on(render, 'afterRender', () => {
         const ctx = render.context;
         Composite.allBodies(engine.world).forEach(body => {
@@ -193,10 +193,11 @@
         });
     });
 
+    // 一鍵解壓邏輯：給予向上的爆發力
     document.getElementById('explode-btn').addEventListener('click', () => {
         blocks.forEach(block => {
             const forceX = (block.position.x - window.innerWidth/2) * 0.001;
-            Body.applyForce(block, block.position, { x: forceX * block.mass, y: -0.3 * block.mass });
+            Body.applyForce(block, block.position, { x: forceX * block.mass, y: -0.4 * block.mass });
         });
     });
 
@@ -208,12 +209,9 @@
 
     Runner.run(engine);
     Render.run(render);
-    window.addEventListener('resize', () => { location.reload(); }); // 轉向時重新整理以校正
+    
+    // 監聽視窗縮放，保持物理環境正確
+    window.addEventListener('resize', () => { location.reload(); });
 </script>
 </body>
 </html>
-
-
-
-
-
