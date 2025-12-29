@@ -106,26 +106,22 @@
 
 <div id="canvas-container"></div>
 
-<div class="ui-layer">
-    <div class="main-card">
-        <h1>親愛的署長：</h1>
-        <div class="content">
-            今年是充滿挑戰與機遇的一年，感謝署長和我們一起站在政策規劃的第一線，進行高密度的決策、協調與推動。許多關鍵選擇、在鎂光燈後的反覆推演，都因署長的<span class="highlight">信任與定錨</span>，讓大家得以穩定前行、順利落地。<br><br>
-            因此，我們期待用一場聚餐，讓大家進行一次低干擾、無風險、但高度必要的<span class="highlight">組織情緒校準</span>，讓我們在新一年<span class="highlight">迎難而上</span>。<br><br>
-            誠摯邀請署長蒞臨，在沒有簡報、不需要裁示、也暫時不啟動任何工作群組的狀態下，與我們一起完成本年度最後一項、也是愉快的收官流程。
+<div class="main-card">
+    <h1 id="boss-title">親愛的長官：</h1>
+    <div id="boss-content" class="content">
         </div>
-        <div class="signature">政策規劃組 明徽、彥廷及全體同仁 敬邀</div>
+    <div id="boss-signature" class="signature">政策規劃組 敬邀</div>
 
-        <div class="info-panel">
-            📅 2026.01.14 (三) 18:30 <br>
-            📍 新韓館 (中山區復興北路344號)
-        </div>
-
-        <div class="btn-group">
-            <button id="explode-btn" class="cta-btn">⚡️ 一鍵解壓</button>
-            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=ADI+Release+Party" class="cta-btn calendar-btn" target="_blank">同步行事曆 ➜</a>
-        </div>
+    <div class="info-panel">
+        📅 2026.01.14 (三) 18:30 <br>
+        📍 新韓館 (中山區復興北路344號)
     </div>
+
+    <div class="btn-group">
+        <button id="explode-btn" class="cta-btn">⚡️ 一鍵解壓</button>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=ADI+Release+Party" class="cta-btn calendar-btn" target="_blank">同步行事曆 ➜</a>
+    </div>
+</div>
     
     <div class="neon-egg" onclick="alert('🔧 核心情緒模組載入成功！')">
         SYSTEM: 測試通過
@@ -212,4 +208,37 @@
 </script>
 </body>
 </html>
+<script>
+    const configs = {
+        'boss': { // 署長版本
+            title: '親愛的署長：',
+            content: '今年是充滿挑戰與機遇的一年，感謝署長和我們一起站在政策規劃的第一線，進行高密度的決策與推動。許多關鍵選擇、在鎂光燈後的反覆推演，都因署長的<span class="highlight">信任與定錨</span>，讓大家得以穩定前行、順利落地。<br><br>因此，我們期待用一場聚餐，讓大家進行一次低干擾、無風險、但高度必要的<span class="highlight">組織情緒校準</span>。在沒有簡報、不需要裁示的狀態下，與我們一起完成本年度最後一項、也是愉快的收官流程。',
+            sig: '政策規劃組 明徽、彥廷及全體同仁 敬邀'
+        },
+        'huang': {
+            title: '親愛的黃副署長：',
+            content: '在無數次高壓的政策研商中，特別感謝副署長始終與我們站在一起。因為有副署長的<span class="highlight">高度信任與定錨</span>，讓我們在面對各種變數時，能有充足的空間去推動落地。政策規劃組的成果，都包含了副署長給予的指導與支撐。這不只是一場尾牙，更是一場<span class="highlight">戰友的聚會</span>。',
+            sig: '政策規劃組 全體同仁 敬邀'
+        },
+        'chen': {
+            title: '親愛的陳副署長：',
+            content: '在複雜的跨領域政策協作中，副署長對整體局勢的洞察與專業指導，一直是政策組重要的參考基準。這一年來，我們深受副署長嚴謹思維的啟發。臨近年終，我們希望能邀請副署長一同參與這場<span class="highlight">組織情緒校準</span>，共同慶祝這一年署內的收官成果。',
+            sig: '政策規劃組 全體同仁 敬邀'
+        },
+        'tong': {
+            title: '親愛的童主秘：',
+            content: '身為政策規劃組的「前輩組長」，組內每一項進展背後都有您過去奠定的堅實基礎。無論公務多麼繁重，我們始終覺得主秘是我們最親近的導師。誠摯邀請主秘<span class="highlight">「回娘家」</span>，與我們這群後輩一起吃頓飯。不需要簽核報請，只需要您帶著放鬆的心情與我們敘舊。',
+            sig: '政策規劃組 全體後輩 敬邀'
+        }
+    };
 
+    // 自動偵測網址參數
+    const urlParams = new URLSearchParams(window.location.search);
+    const target = urlParams.get('to') || 'boss'; // 如果網址沒寫 to=xxx，預設就是署長 (boss)
+
+    if (configs[target]) {
+        document.getElementById('boss-title').innerText = configs[target].title;
+        document.getElementById('boss-content').innerHTML = configs[target].content;
+        document.getElementById('boss-signature').innerText = configs[target].sig;
+    }
+</script>
