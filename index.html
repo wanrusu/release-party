@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta property="og:title" content="署長親啟：2025 政策規劃組收官邀請函">
-<meta property="og:description" content="ADI Year-End Party：本計畫已通過壓力測試，誠邀署長蒞臨。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://wanrusu.github.io/release-party/">
-<meta property="og:image" content="https://wanrusu.github.io/release-party/og-image.png">
-<meta property="og:image:secure_url" content="https://wanrusu.github.io/release-party/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>⚡️ 政策組 v2026 RELEASE ⚡️</title>
+
+    <meta property="og:title" content="署長親啟：2025 政策規劃組收官邀請函">
+    <meta property="og:description" content="ADI Year-End Party：本計畫已通過壓力測試，誠邀署長蒞臨。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wanrusu.github.io/release-party/">
+    <meta property="og:image" content="https://wanrusu.github.io/release-party/og-image.png">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
         
@@ -34,10 +35,10 @@
         .main-card {
             background: rgba(255, 255, 255, 0.98);
             border: 4px solid #000;
-            padding: 25px 20px;
-            max-width: 550px;
-            width: 90%;
-            text-align: center;
+            padding: 30px 25px;
+            max-width: 500px;
+            width: 85%;
+            text-align: center; /* 讓標題置中 */
             pointer-events: auto;
             box-shadow: 12px 12px 0 rgba(0,0,0,1);
             position: relative;
@@ -47,58 +48,47 @@
 
         h1 {
             background: #000; color: #00E5FF; display: inline-block;
-            padding: 5px 15px; margin: 0 0 15px 0; font-size: 1.3rem; font-weight: 900;
+            padding: 5px 15px; margin: 0 0 20px 0; font-size: 1.3rem; font-weight: 900;
         }
 
         .content {
-            line-height: 1.7; font-size: 0.95rem; color: #000; margin: 0;
-            text-align: justify; font-weight: 500;
+            line-height: 1.8; font-size: 1rem; color: #000; margin: 0;
+            text-align: center; /* 文字內容改為置中 */
+            font-weight: 500;
+            white-space: pre-line; /* 保留分段 */
+        }
+
+        .content p {
+            margin-bottom: 15px; /* 段落間隔 */
         }
 
         .highlight { color: #FF5A5F; font-weight: 900; border-bottom: 2px solid #FF5A5F; }
 
-        .signature { text-align: right; margin-top: 15px; font-weight: 900; font-size: 1rem; }
+        .signature { text-align: right; margin-top: 25px; font-weight: 900; font-size: 1.1rem; }
 
         .info-panel {
-            margin-top: 20px; padding: 12px;
+            margin-top: 20px; padding: 15px;
             background: #F0F0F0; border: 2px dashed #000;
-            text-align: left; font-weight: 700; font-size: 0.85rem;
+            text-align: center; font-weight: 700; font-size: 0.95rem;
         }
 
         .btn-group {
-            margin-top: 20px; display: flex; flex-direction: row; gap: 8px; justify-content: center; 
+            margin-top: 25px; display: flex; flex-direction: row; gap: 8px; justify-content: center; 
             pointer-events: auto; position: relative; z-index: 100;
         }
 
         .cta-btn {
             background: #000; color: #fff; text-decoration: none;
-            padding: 10px 15px; font-size: 0.9rem; font-weight: 900;
+            padding: 12px 18px; font-size: 0.9rem; font-weight: 900;
             border: none; border-radius: 50px; cursor: pointer;
             box-shadow: 0 4px 0 #333; transition: 0.1s;
-            white-space: nowrap;
         }
 
-        .cta-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #333; }
         .calendar-btn { background: #FF5A5F; box-shadow: 0 4px 0 #CF4A4E; }
 
-        .neon-egg {
-            position: fixed; bottom: 10px; right: 10px;
-            background: #000; color: #0FF; padding: 5px 10px;
-            font-size: 0.65rem; font-weight: 900; border-radius: 5px;
-            border: 1px solid #0FF;
-            box-shadow: 0 0 8px #0FF;
-            animation: bounce 2s infinite ease-in-out;
-            pointer-events: auto; z-index: 1000;
-        }
-
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-
         @media (max-width: 480px) {
-            h1 { font-size: 1.1rem; }
-            .content { font-size: 0.88rem; line-height: 1.6; }
-            .main-card { padding: 20px 15px; }
             .btn-group { flex-direction: column; }
-            .cta-btn { width: 100%; box-sizing: border-box; }
+            .content { font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -106,41 +96,69 @@
 
 <div id="canvas-container"></div>
 
-<div class="main-card">
-    <h1 id="boss-title">親愛的長官：</h1>
-    <div id="boss-content" class="content">
+<div class="ui-layer">
+    <div class="main-card">
+        <h1 id="boss-title">親愛的長官：</h1>
+        <div id="boss-content" class="content">
+            </div>
+        <div id="boss-signature" class="signature">政策規劃組 敬邀</div>
+
+        <div class="info-panel">
+            📅 2026.01.14 (三) 18:30 <br>
+            📍 新韓館 (中山區復興北路344號)
         </div>
-    <div id="boss-signature" class="signature">政策規劃組 敬邀</div>
 
-    <div class="info-panel">
-        📅 2026.01.14 (三) 18:30 <br>
-        📍 新韓館 (中山區復興北路344號)
-    </div>
-
-    <div class="btn-group">
-        <button id="explode-btn" class="cta-btn">⚡️ 一鍵解壓</button>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=ADI+Release+Party" class="cta-btn calendar-btn" target="_blank">同步行事曆 ➜</a>
-    </div>
-</div>
-    
-    <div class="neon-egg" onclick="alert('🔧 核心情緒模組載入成功！')">
-        SYSTEM: 測試通過
+        <div class="btn-group">
+            <button id="explode-btn" class="cta-btn">⚡️ 一鍵解壓</button>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=ADI+Release+Party" class="cta-btn calendar-btn" target="_blank">同步行事曆 ➜</a>
+        </div>
     </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
 <script>
+    const configs = {
+        'boss': {
+            title: '親愛的署長：',
+            content: '今年是充滿挑戰與機遇的一年，\n感謝署長和我們一起站在政策規劃的第一線。\n\n許多關鍵選擇，都因署長的\n<span class="highlight">「信任與定錨」</span>\n讓大家得以穩定前行、順利落地。\n\n誠摯邀請署長蒞臨，\n在沒有簡報、不需要裁示的狀態下，\n與我們一起完成本年度最後一項、\n也是愉快的收官流程。',
+            sig: '政策規劃組 明徽、彥廷及全體同仁 敬邀'
+        },
+        'huang': {
+            title: '親愛的黃副署長：',
+            content: '在無數次高壓的政策研商中，\n特別感謝副署長始終與我們站在一起。\n\n因為有副署長的\n<span class="highlight">「高度信任與定錨」</span>\n讓我們在面對變數時，有空間去推動落地。\n\n這不只是一場尾牙，\n更是一場戰友的聚會，\n誠摯邀請副署長蒞臨！',
+            sig: '政策規劃組 全體同仁 敬邀'
+        },
+        'chen': {
+            title: '親愛的陳副署長：',
+            content: '在複雜的跨領域政策協作中，\n副署長資深的觀察與指導，\n一直是政策組重要的參考基準。\n\n臨近年終，我們希望能邀請副署長\n一同參與這場<span class="highlight">「組織情緒校準」</span>，\n在輕鬆的聚餐中，\n共同慶祝這一年署內的收官成果。',
+            sig: '政策規劃組 全體同仁 敬邀'
+        },
+        'tong': {
+            title: '親愛的童主秘：',
+            content: '身為政策規劃組的「前輩組長」，\n組內每一項進展背後，\n都有您過去奠定的堅實基礎。\n\n誠摯邀請主秘<span class="highlight">「回娘家」</span>，\n與我們這群後輩一起吃頓飯。\n\n不需要簽核報請，只需要您帶著\n放鬆的心情，與我們敘舊。',
+            sig: '政策規劃組 全體後輩 敬邀'
+        }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const target = urlParams.get('to') || 'boss';
+
+    if (configs[target]) {
+        document.getElementById('boss-title').innerText = configs[target].title;
+        document.getElementById('boss-content').innerHTML = configs[target].content;
+        document.getElementById('boss-signature').innerText = configs[target].sig;
+    }
+
+    // 物理引擎邏輯 (Matter.js)
     const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint, Body, Events } = Matter;
     const engine = Engine.create();
     const isMobile = window.innerWidth < 480;
-
     const render = Render.create({
         element: document.getElementById('canvas-container'),
         engine: engine,
         options: { width: window.innerWidth, height: window.innerHeight, background: 'transparent', wireframes: false }
     });
 
-    // 邊界設定
     Composite.add(engine.world, [
         Bodies.rectangle(window.innerWidth/2, window.innerHeight+50, window.innerWidth, 100, { isStatic: true }),
         Bodies.rectangle(-50, window.innerHeight/2, 100, window.innerHeight, { isStatic: true }),
@@ -150,17 +168,14 @@
     const words = ["挑戰", "機遇", "信任", "定錨", "校準", "迎難而上", "收官", "v2026", "ADI", "落地", "穩定", "解壓"];
     const colors = ["#00E5FF", "#FF5A5F", "#B693FE", "#26FFBF", "#FFA057", "#000"];
     const blocks = [];
-
-    const count = isMobile ? 40 : 80;
+    const count = isMobile ? 35 : 70;
     const blockSize = isMobile ? 0.7 : 1;
 
     for (let i = 0; i < count; i++) {
         const text = words[i % words.length];
         const color = colors[i % colors.length];
-        // 積木主要落在兩側，避免遮擋中央文字卡片
         const sideWidth = window.innerWidth * 0.2;
         const x = Math.random() < 0.5 ? Math.random() * sideWidth : window.innerWidth - (Math.random() * sideWidth);
-        
         const block = Bodies.rectangle(x, Math.random() * -2000, (text.length * 25 + 20) * blockSize, 45 * blockSize, {
             restitution: 0.8, friction: 0.1,
             render: { fillStyle: color, strokeStyle: '#000', lineWidth: 2, text: { content: text, color: (color==='#000'||color==='#FF5A5F')?'#fff':'#000', size: isMobile ? 14 : 18 } }
@@ -169,7 +184,6 @@
     }
     Composite.add(engine.world, blocks);
 
-    // 文字渲染邏輯
     Events.on(render, 'afterRender', () => {
         const ctx = render.context;
         Composite.allBodies(engine.world).forEach(body => {
@@ -186,7 +200,6 @@
         });
     });
 
-    // 一鍵解壓邏輯：給予向上的爆發力
     document.getElementById('explode-btn').addEventListener('click', () => {
         blocks.forEach(block => {
             const forceX = (block.position.x - window.innerWidth/2) * 0.001;
@@ -199,46 +212,9 @@
         constraint: { stiffness: 0.2, render: { visible: false } }
     });
     Composite.add(engine.world, mouseConstraint);
-
     Runner.run(engine);
     Render.run(render);
-    
-    // 監聽視窗縮放，保持物理環境正確
     window.addEventListener('resize', () => { location.reload(); });
 </script>
 </body>
 </html>
-<script>
-    const configs = {
-        'boss': { // 署長版本
-            title: '親愛的署長：',
-            content: '今年是充滿挑戰與機遇的一年，感謝署長和我們一起站在政策規劃的第一線，進行高密度的決策與推動。許多關鍵選擇、在鎂光燈後的反覆推演，都因署長的<span class="highlight">信任與定錨</span>，讓大家得以穩定前行、順利落地。<br><br>因此，我們期待用一場聚餐，讓大家進行一次低干擾、無風險、但高度必要的<span class="highlight">組織情緒校準</span>。在沒有簡報、不需要裁示的狀態下，與我們一起完成本年度最後一項、也是愉快的收官流程。',
-            sig: '政策規劃組 明徽、彥廷及全體同仁 敬邀'
-        },
-        'huang': {
-            title: '親愛的黃副署長：',
-            content: '在無數次高壓的政策研商中，特別感謝副署長始終與我們站在一起。因為有副署長的<span class="highlight">高度信任與定錨</span>，讓我們在面對各種變數時，能有充足的空間去推動落地。政策規劃組的成果，都包含了副署長給予的指導與支撐。這不只是一場尾牙，更是一場<span class="highlight">戰友的聚會</span>。',
-            sig: '政策規劃組 全體同仁 敬邀'
-        },
-        'chen': {
-            title: '親愛的陳副署長：',
-            content: '在複雜的跨領域政策協作中，副署長對整體局勢的洞察與專業指導，一直是政策組重要的參考基準。這一年來，我們深受副署長嚴謹思維的啟發。臨近年終，我們希望能邀請副署長一同參與這場<span class="highlight">組織情緒校準</span>，共同慶祝這一年署內的收官成果。',
-            sig: '政策規劃組 全體同仁 敬邀'
-        },
-        'tong': {
-            title: '親愛的童主秘：',
-            content: '身為政策規劃組的「前輩組長」，組內每一項進展背後都有您過去奠定的堅實基礎。無論公務多麼繁重，我們始終覺得主秘是我們最親近的導師。誠摯邀請主秘<span class="highlight">「回娘家」</span>，與我們這群後輩一起吃頓飯。不需要簽核報請，只需要您帶著放鬆的心情與我們敘舊。',
-            sig: '政策規劃組 全體後輩 敬邀'
-        }
-    };
-
-    // 自動偵測網址參數
-    const urlParams = new URLSearchParams(window.location.search);
-    const target = urlParams.get('to') || 'boss'; // 如果網址沒寫 to=xxx，預設就是署長 (boss)
-
-    if (configs[target]) {
-        document.getElementById('boss-title').innerText = configs[target].title;
-        document.getElementById('boss-content').innerHTML = configs[target].content;
-        document.getElementById('boss-signature').innerText = configs[target].sig;
-    }
-</script>
