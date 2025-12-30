@@ -11,9 +11,9 @@
         .ui-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10; display: flex; justify-content: center; align-items: center; }
         .main-card { background: rgba(255, 255, 255, 0.98); border: 4px solid #000; padding: 20px; max-width: 450px; width: 85%; text-align: center; pointer-events: auto; box-shadow: 10px 10px 0 #000; max-height: 80vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
         h1 { background: #000; color: #00E5FF; display: inline-block; padding: 5px 15px; margin-top: 0; font-size: 1.2rem; font-weight: 900; }
-        .content { line-height: 1.7; font-size: 0.95rem; color: #000; text-align: justify; font-weight: 500; }
+        .content { line-height: 1.8; font-size: 0.95rem; color: #000; text-align: justify; font-weight: 500; }
         .highlight { color: #FF5A5F; font-weight: 900; border-bottom: 2px solid #FF5A5F; }
-        .signature { text-align: right; margin-top: 15px; font-weight: 900; font-size: 1rem; }
+        .signature { text-align: right; margin-top: 20px; font-weight: 900; font-size: 1rem; white-space: pre-line; }
         .info-panel { margin-top: 15px; padding: 10px; background: #F0F0F0; border: 2px dashed #000; text-align: left; font-weight: 700; font-size: 0.85rem; }
         .btn-group { margin-top: 20px; display: flex; gap: 10px; }
         .cta-btn { flex: 1; background: #000; color: #fff; text-decoration: none; padding: 12px 5px; font-size: 0.85rem; font-weight: 900; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 0 #333; text-align: center; }
@@ -40,27 +40,27 @@
     const configs = {
         'boss': {
             title: '親愛的署長：',
-            content: '今年是充滿挑戰與機遇的一年，感謝署長與我們一同站在數位政策的第一線，激勵我們走出舒適圈，看見政策規劃的各種可能。<br><br>許多不在鎂光燈下的反覆推演，都因署長的<span class="highlight">信任與定錨</span>，讓大家得以穩定前行。因此，我們選擇用一場聚餐，慶祝這一年的成長與突破，讓我們在新的一年持續大步向前。<br><br>誠摯邀請署長蒞臨，在沒有簡報、不需裁示的狀態下，與我們一起完成本年度最後、也最<span class="highlight">輕盈的時刻</span>。',
+            content: '今年是充滿挑戰與機遇的一年，感謝署長與我們一同站在數位政策的第一線，激勵我們走出舒適圈，看見政策規劃的各種可能。許多不在鎂光燈下的反覆推演，都因署長的信任與定錨，讓大家得以穩定前行。<br><br>因此，我們選擇用一場聚餐， 一起慶祝這一年的成長與突破，讓我們在新的一年持續大步向前。<br><br>誠摯邀請署長蒞臨，在沒有簡報、不需裁示、也暫時不新啟任何工作群組的狀態下，與我們一起完成本年度最後、也最<span class="highlight">輕盈的時刻</span>。',
             sig: '政策規劃組 明徽、全體同仁 敬邀'
         },
         'huang': {
             title: '親愛的黃副署長：',
-            content: '今年是充滿挑戰與機遇的一年，感謝黃副始終與我們站在一起，做我們最強力的後盾。因為有黃副的高度信任與支持，讓大家在面對各項挑戰時，能不畏困難齊心協力完成任務。<br><br>今年政策組的成果，都包含著黃副給予的指導與關懷。這場聚餐，不僅是年度尾聲的相聚，更是一場<span class="highlight">戰友的聚會</span>。<br><br>誠摯邀請黃副蒞臨，在輕鬆的氛圍中，與我們一同慶賀 2025 年的豐收，並迎向 2026 年的<span class="highlight">嶄新旅程</span>。',
+            content: '今年是充滿挑戰與機遇的一年，感謝黃副始終與我們站在一起，做我們最強力的後盾。因為有黃副的高度信任與支持，讓我們在面對各項挑戰時，能不畏困難，齊心協力完成任務。<br><br>今年政策組的成果，都包含著黃副給予的指導與關懷。這場聚餐，不僅是年度尾聲的相聚，更是一場<span class="highlight">戰友的聚會</span>。<br><br>誠摯邀請黃副蒞臨，在輕鬆的氛圍中，與我們一同慶賀2025年的豐收，並迎向2026年的嶄新旅程。',
             sig: '政策規劃組 明徽、全體同仁 敬邀'
         },
         'chen': {
             title: '親愛的陳副署長：',
-            content: '今年是充滿挑戰與機遇的一年，在多項跨領域政策協作中，非常感謝陳副給我們的指導，讓我們得以完成各項挑戰。<br><br>誠摯邀請陳副蒞臨，在繁忙公務之外，讓我們有機會表達對您的謝意，並在一場輕鬆的聚餐中，分享今年度的點滴，一起迎向新的一年。',
+            content: '今年是充滿挑戰與機遇的一年，在多項跨領域的協作中，感謝陳副給我們指導，讓我們順利完成任務。<br><br>誠摯邀請陳副蒞臨，在繁忙公務之外，和我們來一場輕鬆的聚餐，共同分享今年度的點滴，一起迎向新的一年。',
             sig: '政策規劃組 明徽、全體同仁 敬邀'
         },
         'tong': {
             title: '親愛的童主秘：',
-            content: '今年是充滿挑戰與機遇的一年，政策組在不少關鍵時刻，仍然沿用著熟悉、好用的節奏，讓許多工作能夠穩定推進。<br><br>年度將近尾聲，我們規劃了一場輕鬆的聚餐，暫時把公文放一旁，單純坐下來吃頓飯、聊聊天。<br><br>誠摯邀請主秘蒞臨，在繁忙公務之外，讓我們有機會表達對您的謝意，共同分享點滴，一起迎向<span class="highlight">嶄新的一年</span>。',
+            content: '今年是充滿挑戰與機遇的一年，政策組在不少關鍵時刻，仍然沿用著熟悉、好用的節奏，讓許多工作能夠穩定推進。<br><br>年度將近尾聲，我們規劃了一場輕鬆的聚餐，暫時把公文放一旁，單純坐下來吃頓飯、聊聊天。<br><br>誠摯邀請主秘蒞臨，在繁忙公務之外，讓我們有機會表達對您的謝意，並在一場輕鬆的聚餐中，共同分享今年度的點滴，一起迎向新的一年。',
             sig: '政策規劃組 明徽、全體同仁 敬邀'
         },
         'team': {
             title: '給政策組的夥伴們：',
-            content: '今年我們一起跑過無數場高強度的壓力測試。大家在各種變數中反覆推演、在壓力下依然優秀完成任務。這一年和大家一路前行，心裡很充實很自豪，更多的是感謝。<br><br>這是一場專屬於我們的聚會，請大家暫時登出公務帳號，放下簡報與待辦清單，一如既往暢所欲言。<br><br>誠摯邀請大家蒞臨，讓我們用一頓飯的時間，單純地聚在一起，<span class="highlight">為這一年的奮鬥熱烈乾杯。Excellent！</span>',
+            content: '今年我們一起跑過無數場高強度的壓力測試。大家在各種變數中反覆推演、在壓力下依然優秀完成任務。這一年和大家一路前行，心裡很充實很自豪，更多的是感謝。<br><br>所以，在這是一場專屬於我們的聚會，請大家暫時登出公務帳號，放下簡報與待辦清單，一如既往暢所欲言。<br><br>誠摯邀請大家蒞臨，讓我們用一頓飯的時間，單純地聚在一起，為這一年的奮鬥熱烈乾杯。<span class="highlight">Excellent！</span>',
             sig: '明徽 敬邀'
         }
     };
@@ -74,15 +74,15 @@
     document.getElementById('boss-signature').innerText = data.sig;
     document.title = data.title + " 2025 收官邀請函";
 
-    // 物理效果
+    // 物理引擎邏輯
     const { Engine, Render, Runner, Bodies, Composite, Body, Events } = Matter;
     const engine = Engine.create();
     const render = Render.create({ element: document.getElementById('canvas-container'), engine: engine, options: { width: window.innerWidth, height: window.innerHeight, background: 'transparent', wireframes: false } });
     Composite.add(engine.world, Bodies.rectangle(window.innerWidth/2, window.innerHeight+50, window.innerWidth, 100, { isStatic: true }));
-    const words = ["挑戰", "機遇", "信任", "定錨", "收官", "ADI", "落地", "穩定", "解壓"];
+    const words = ["挑戰", "機遇", "信任", "定錨", "收官", "ADI", "落地", "穩定", "Excellent"];
     const colors = ["#00E5FF", "#FF5A5F", "#B693FE", "#26FFBF", "#FFA057"];
     const blocks = [];
-    const count = window.innerWidth < 480 ? 25 : 50;
+    const count = window.innerWidth < 480 ? 25 : 55;
     for (let i = 0; i < count; i++) {
         const text = words[i % words.length];
         const block = Bodies.rectangle(Math.random() * window.innerWidth, Math.random() * -1000, text.length * 22 + 15, 38, { restitution: 0.5, render: { fillStyle: colors[i % colors.length], strokeStyle: '#000', lineWidth: 2, text: { content: text, color: '#000', size: 14 } } });
@@ -106,5 +106,3 @@
 </script>
 </body>
 </html>
-
-
